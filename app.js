@@ -10,9 +10,7 @@ app.use(cors())
 app.get('/', (req, res) => {
     try {
         console.log(arr);
-        return res.send({
-            message: `Hello NodeJs Server is Running on PORT${PORT}!`, success: true
-        })
+        return res.send({ message: 'Hello NodeJs Server is Running!', success: true })
     } catch (e) {
         console.log('e', e);
         return res.send({ message: e?.message, success: false })
